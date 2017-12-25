@@ -1,0 +1,27 @@
+{
+  "parser": "babel-eslint",
+  "extends" : [
+    "airbnb",
+    "prettier"
+  ],
+  "plugins": [
+    "prettier",
+    "import"
+  ],
+  "parserOptions": {
+    "ecmaVersion": 8,
+    "sourceType": "module"
+  },
+  "env": {
+    "es6": true,
+    "browser": true,
+    "shared-node-browser": true
+  },
+  "rules": {
+    "semi": ["error", "never"],
+    "prettier/prettier": ["error", { "singleQuote": true, "trailingComma": "es5", "jsxBracketSameLine": true, "semi": false, "printWidth": 100 }],
+    "curly": ["error", "multi"],
+    "quotes": ["error", "single", { "avoidEscape": true, "allowTemplateLiterals": true }],
+    "no-underscore-dangle": "off"
+  }
+}

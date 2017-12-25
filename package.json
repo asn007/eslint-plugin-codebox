@@ -1,0 +1,39 @@
+{
+  "name": "eslint-plugin-codebox",
+  "version": "1.0.0",
+  "description": "A set of ESLint rules we use at Codebox",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": "asn007/eslint-plugin-codebox",
+  "keywords": [
+    "codebox",
+    "eslint",
+    "rules"
+  ],
+  "author": {
+    "name": "Andrey Sinitsyn",
+    "email": "andrey.sin98@gmail.com",
+    "url": "https://andrey.space"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/asn007/eslint-plugin-codebox/issues"
+  },
+  "homepage": "https://github.com/asn007/eslint-plugin-codebox#readme",
+  "devDependencies": {
+    "babel-eslint": "^8.1.1",
+    "eslint": "^4.14.0",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-config-prettier": "^2.9.0",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-prettier": "^2.4.0",
+    "prettier": "^1.9.2",
+    "eslint-plugin-react": "^7.5.1"
+  },
+  "peerDependencies": {
+    "eslint": "^3.0.0 || ^4.0.0"
+  }
+}
