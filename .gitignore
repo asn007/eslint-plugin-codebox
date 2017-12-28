@@ -216,8 +216,4 @@ Temporary Items
 
 # End of https://www.gitignore.io/api/macos
 
-# You will need your own .env file based on .env.template
-.env
-
-# Large fixture
-e2e/fixtures/workdays-testdata.json
+.vscode/*
