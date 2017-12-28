@@ -1,5 +1,6 @@
 import ESLint from 'eslint'
-import sortImportsRule from '../../src/rules/sort-imports'
+
+const sortImportsRule = require('../../src/rules/sort-imports')
 
 const ruleTester = new ESLint.RuleTester({
   parser: 'babel-eslint',
@@ -43,6 +44,36 @@ ruleTester.run('codebox/sort-imports', sortImportsRule, {
     },
   ],
   invalid: [
+    {
+      code: `
+        import DevTools from './modules/common/components/DevTools'
+        import MainPage from './modules/main/MainPage'
+        import React from 'react'
+        import { BrowserRouter, Route } from 'react-router-dom'
+        import { Provider } from 'react-redux'
+      `,
+      errors: [
+        {
+          message: `Imports './modules/common/components/DevTools' and 'react' should be swapped`,
+        },
+        { message: `Imports './modules/main/MainPage' and 'react-router-dom' should be swapped` },
+        { message: `Imports 'react' and 'react-redux' should be swapped` },
+      ],
+      output: `
+        import React from 'react'
+        import { BrowserRouter, Route } from 'react-router-dom'
+        import { Provider } from 'react-redux'
+        import DevTools from './modules/common/components/DevTools'
+        import MainPage from './modules/main/MainPage'
+      `,
+      options: [
+        {
+          importTypes: ['default', 'named', 'all', 'none'],
+          groups: ['builtin', 'external', 'parent', 'sibling', ['index', 'unknown', 'absolute']],
+          ignoreCase: true,
+        },
+      ],
+    },
     {
       code: `
         import redux from 'redux'

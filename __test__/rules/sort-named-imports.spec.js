@@ -1,5 +1,6 @@
 import ESLint from 'eslint'
-import sortNamedImportsRule from '../../src/rules/sort-named-imports'
+
+const sortNamedImportsRule = require('../../src/rules/sort-named-imports')
 
 const ruleTester = new ESLint.RuleTester({
   parser: 'babel-eslint',

@@ -1,4 +1,4 @@
-export default {
+module.exports = {
   meta: {
     docs: {
       description: 'enforce sorted members of named imports',

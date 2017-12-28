@@ -5,13 +5,22 @@
   "main": "./lib/index.js",
   "scripts": {
     "test": "jest",
-    "build": "babel src -d lib"
+    "build": "babel src -d lib",
+    "prepublish": "npm run build"
   },
   "repository": "asn007/eslint-plugin-codebox",
   "keywords": [
     "codebox",
     "eslint",
+    "eslint-plugin",
     "rules"
+  ],
+  "directories": {
+    "test": "__test__"
+  },
+  "files": [
+    "lib",
+    "src"
   ],
   "author": {
     "name": "Andrey Sinitsyn",
@@ -46,6 +55,7 @@
   "dependencies": {
     "builtin-modules": "^2.0.0",
     "eslint-module-utils": "^2.1.1",
+    "jest-cli": "^22.0.4",
     "lodash": "^4.17.4"
   }
 }
