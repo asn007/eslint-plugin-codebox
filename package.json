@@ -1,6 +1,6 @@
 {
   "name": "eslint-plugin-codebox",
-  "version": "1.0.2",
+  "version": "2.0.0",
   "description": "A set of ESLint rules we use at Codebox",
   "main": "./lib/index.js",
   "scripts": {
