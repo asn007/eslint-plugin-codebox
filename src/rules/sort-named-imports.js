@@ -1,3 +1,4 @@
+import getImportKind from '../utils/getImportKind';
 module.exports = {
   meta: {
     docs: {

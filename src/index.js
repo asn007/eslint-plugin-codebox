@@ -1,9 +1,6 @@
-import sortImports from './rules/sort-imports'
-import sortNamedImports from './rules/sort-named-imports'
-
 export const rules = {
-  'sort-imports': require('./rules/sort-imports'),
-  'sort-named-imports': require('./rules/sort-imports'),
+  'sort-imports': require('./rules/sort-imports'),             // eslint-disable-line
+  'sort-named-imports': require('./rules/sort-named-imports'), // eslint-disable-line
 }
 
 export const configs = {
