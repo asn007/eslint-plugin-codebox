@@ -18,6 +18,23 @@ ruleTester.run('codebox/sort-named-imports', sortNamedImportsRule, {
       `,
       options: [{ ignoreCase: true }],
     },
+    {
+      code: `
+        import { a, B, c } from 'fs'
+      `,
+      options: [{ ignoreCase: true }],
+    },
+    {
+      code: `
+        import { a, B, c } from 'fs'
+      `,
+    },
+    {
+      code: `
+        import { B, a, c } from 'fs'
+      `,
+      options: [{ ignoreCase: false }],
+    },
   ],
   invalid: [
     {
@@ -28,6 +45,16 @@ ruleTester.run('codebox/sort-named-imports', sortNamedImportsRule, {
       options: [{ ignoreCase: true }],
       output: `
         import { a, b, c } from 'fs'
+      `,
+    },
+    {
+      code: `
+        import { a, B, c } from 'fs'
+      `,
+      errors: [{ message: `Member 'B' of the import declaration should be sorted alphabetically` }],
+      options: [{ ignoreCase: false }],
+      output: `
+        import { B, a, c } from 'fs'
       `,
     },
   ],

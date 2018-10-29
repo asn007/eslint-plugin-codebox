@@ -26,7 +26,7 @@ module.exports = {
   create(context) {
     const sourceCode = context.getSourceCode()
     const config = context.options[0] || {}
-    const ignoreCase = config.ignoreCase || true
+    const ignoreCase = config.ignoreCase !== undefined ? config.ignoreCase : true;
     return {
       ImportDeclaration(node) {
         const importSpecifiers = node.specifiers.filter(
